@@ -107,7 +107,7 @@ const Home = () => {
 
 
 
-      <div className="login-setUp">
+      <div className="register-setUp">
 
         <Login />
       </div>
@@ -166,7 +166,7 @@ const Home = () => {
 
 
         <h1 className={`${theme === "light" ? "white-texts" : ""} mt-5`}>L A M P</h1>
-        <p className={`${theme === "light" ? "white-txt" : ""} home-box`}>  </p>
+        <p className={`${theme === "light" ? "white-txt" : ""} home-box`}>  
         <h1>The Vision</h1>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis explicabo eaque hic.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vero, nisi rem error dolorum cumque.
@@ -174,10 +174,10 @@ const Home = () => {
         dolorem magni perferendis voluptate eum architecto vitae laboriosam commodi fugiat veniam debitis et! Vero, corrupti. Qui?
 
 
-
+        </p>
 
         <div className="btns mt-5 active">
-          <button className="btn btn-primary login " type="button" data-bs-toggle="modal" data-bs-target="#loginmodal">Log In </button>
+          <button class="btn btn-primary login " type="button" data-bs-toggle="modal" data-bs-target="#loginmodal">Log In </button>
           <button type="button" class="btn btn-primary signup" data-bs-toggle="modal" data-bs-target="#signupmodal">
             SignUp
           </button>

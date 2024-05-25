@@ -29,11 +29,11 @@ body {
   --white: #ffffff;
 }
 
-.container {
+/* .container {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 2rem;
   margin-top: 10rem;
-}
+} */
 
 .home-box{
   /* width: 1200px; */
@@ -635,7 +635,7 @@ to{
 
 
 
-modal-dialog {
+.modal-dialog {
   width: auto;
   height: auto;
   position: fixed;
@@ -646,7 +646,7 @@ modal-dialog {
   }
   
   .modal-dialog .modal-content {
-  height:100%
+  height:50%;
   }
 
 /* responsive codes */

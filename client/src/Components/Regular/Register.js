@@ -109,8 +109,7 @@ const Register = () => {
 
 
 
-            <div className={`box lamp ${theme === "dark"?" dark-bg-lamp":""}`}>
-        <div className='container'>
+        <div className='container popup'>
             <form action='post'>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail11" className="form-label">Username</label>
@@ -138,7 +137,10 @@ const Register = () => {
                 </div>
             </form>
         </div>
-        </div>
+
+
+
+       
         <ToastContainer/>
 
 
@@ -150,7 +152,8 @@ const Register = () => {
             </div>
           </div>
         </div>
-      </div>
+        </div>
+    
 
 
 
