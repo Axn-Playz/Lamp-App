@@ -107,7 +107,7 @@ const Home = () => {
 
 
 
-      <div className="login-setup">
+      <div className="login-setUp">
 
         <Login />
       </div>
