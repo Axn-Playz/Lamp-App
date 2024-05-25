@@ -5,6 +5,8 @@ body {
   font-weight: 400;
   font-style: normal;
   overflow-x: hidden;
+  width:100%;
+  height:100%;
 }
 
 
@@ -491,114 +493,107 @@ i {
   background-color: rgba(255, 255, 255, 0.158);
 }
 
-.container-fluid{
 
-  align-items: center;
-  justify-content: space-between;
-  display:flex;
+.main-status{
   position: fixed;
-  bottom:0;
-  z-index:2;
-  max-height:3rem;
-  border:1px solid black;
-  border-radius: 10px;
-  padding: 10px;
-  background-color: white;
-}
+  bottom: 0;
+  background: transparent;
 
-.profile{
-  color:white;
-  display:flex;
-  flex-direction: row;
-  padding:5px;
-  background-color: rgb(34, 106, 109);
-  border-radius: 20px;
-}
-
-
-.controlpanel{
-  padding:-20px;
-  display:flex;
-  flex-direction:row;
-  align-items: center;
-  justify-content:space-around;
-  width:30%;
-  background-color: rgb(34, 106, 109);
-  border-radius: 30px;
-  height:2rem;
-  
- 
-}
-
-.controlpanel .TestsAI{
-  position: absolute;
-  background: rgb(131,58,180);
-background: linear-gradient(35deg, rgb(0, 183, 255)0%, rgb(255, 255, 255) 50%, rgb(2, 247, 255) 100%);
-
-  text-align: center;
-  color:rgb(0, 0, 0);
-  
-  border-radius: 2000px;
- 
- padding:3px;
-  background-size: 300%;
-  border:3px solid black;
-  animation: airotate 2s ease-in-out infinite;
-  cursor:pointer;
- 
-}
-
-
-
-
-.TestsAI img{
-  
-  width:50px;
-  height:50px;
-  border-radius: 50%;
-  z-index:-1;
-}
-.sideset span{
- 
-  /* margin-top: 5px; */
- font-size: 25px;
- 
-  color:white;
-}
-
-
-
-.sideset span:hover{
- 
-  transition: 0.5s ease-in-out;
-}
-
-.sideset:hover{
-  color:rgba(0, 255, 0, 0.356);
-  
-}
-
-
-
-.sideset{
-
-  margin: 3px;
-  cursor:pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  width:20%;
-  border-radius: 2000px;
+  width: 100%;
+  margin-bottom: 0;
+  padding:0;
+  /* height:10px; */
 }
 
-.userInfo{
-  box-shadow: none;
+.status-lists {
+  margin-bottom: 5px;
+  background-color: #3a3636;
+  position: relative;
+  bottom: 0;
+  z-index: 1;
+  /* margin-bottom: 50px; */
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
 }
 
-.userInfo .col{
-  margin-left: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.295), 0 6px 20px 0 rgba(0, 0, 0, 0.336);
+.status-lists ul {
+  display: flex;
+  width: 350px;
+  list-style: none;
+}
+
+.status-lists ul li button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+}
+
+.status-lists ul li {
+  z-index: 1;
+  display: relative;
+  width: 70px;
+  height: 70px;
+}
+
+
+.status-lists ul li button span {
+  color: white;
+  display: block;
+  position: relative;
+  line-height: 75px;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: 0.5s;
+
+
+}
+
+.status-lists ul li.active button span {
+
+  transform: translateY(-45px);
+  /* transform: translateX(4px); */
+ 
+}
+
+.status-lists ul li button .text {
+  color: white;
+  position: absolute;
+  font-weight: 400;
+  font-size: 0.95em;
+  letter-spacing: 0.10em;
+  transition: 0.05s;
+  opacity: 0;
+  transform: translateY(20px);
+
+}
+
+.status-lists ul li.active button .text {
+  opacity: 1;
+}
+
+.indicator {
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background: #0c6e68;
+  border-radius: 100%;
+  border: 6px solid white;
+  transition: 0.5s;
+
 }
 
 @keyframes airotate{

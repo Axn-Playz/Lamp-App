@@ -59,14 +59,17 @@ const UserInterface = () => {
 
 
 </div>
-  </div>
+</div>
+</div>
+<Status/>
+</div>
 
 
 
-  </div>
- <Status/>
+ 
+
     
-    </div>
+    
    
   )
 };

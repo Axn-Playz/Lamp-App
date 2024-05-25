@@ -8,25 +8,61 @@ const Status = () => {
 return(
 
 
-<div className="container-fluid">
- <div className="profile">
- <div className="photo">😊  </div>
- <div className="username"> {localStorage.getItem('userName')}</div>
- </div>
+<div className="main-status">
 
-
- <div className="controlpanel">
-      <div className=" sideset settings" title="Settings"><span class="material-symbols-rounded">manage_accounts</span></div> 
-      <div className="TestsAI" title="Ques Camp"><img src={darkImg} alt="logo" /></div> 
-      <div className=" sideset public" title="Public"><span class="material-symbols-rounded">
-public
-</span></div> 
- </div>
  
- <div className="level">Level:{level}</div>
- 
-</div>
 
+
+  <div class="status-lists">
+    <ul>
+      <li class="active">
+        <button>
+          <span class="material-symbols-rounded">public</span>
+          <div class="text">Public</div>
+        </button>
+      </li>
+
+      <li>
+        <button>
+          <span class="material-symbols-rounded">
+            settings
+
+          </span>
+          <div class="text">Public</div>
+        </button>
+      </li>
+
+      <li>
+        <button>
+          <span class="material-symbols-rounded">
+            light
+          </span>
+          <div class="text">Ques Camp</div>
+
+        </button>
+      </li>
+      <li>
+        <button>
+          <span class="material-symbols-rounded">
+            contact_support
+          </span>
+          <div class="text">Queries</div>
+        </button>
+      </li>
+      <li>
+        <button>
+          <span class="material-symbols-rounded">
+            chat
+          </span>
+          <div class="text">Chat</div>
+        </button>
+       
+      </li>
+       <div class="indicator"></div>
+    
+    </ul>
+  </div>
+   </div>
 
 
 )
