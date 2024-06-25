@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Nav from '../Reusable/Nav';
-import { Link } from 'react-router-dom';
 import SetUpQues from '../Reusable/SetUpQues';
 import darkImg from '../Regular/Images/BlackLogo.png'
 
@@ -22,6 +20,8 @@ const Setup = () => {
       <div className='setup-nav'>
         <div className="logo setup-logo mb-5">
           <img src={`${darkImg}`} alt="" />
+       
+     
         </div>
         <h1 className="first typewriter mt-5">✨Lets Quickly Setup Your Account✨</h1>
         </div>

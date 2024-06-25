@@ -20,6 +20,10 @@ const userSchema = new mongoose.Schema({
     password:{
         type:String,
         required:[true,'password is must']
+    },
+    avatarCode:{
+        type:String,
+        required:[true,'avatar is must']
     }
 },{timestamps:true});
 

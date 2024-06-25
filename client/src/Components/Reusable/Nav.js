@@ -11,14 +11,18 @@ const Nav = () => {
     const handleDarkTheme = (e) =>{
         setTheme(theme === "light"?"dark":"light")
     }
-    console.log(theme)
+    // console.log(theme)
     return (
         <div>
-            <ul className={`nav nav-pills mb-3 ${theme === "light"?"dark-bg-nav text-light":""}`}>
+            <ul className={`nav nav-pills mb-3 ${theme === "light"?"dark-bg-nav text-light":""}`}>  
 
-                <div className="logo">
-                    LOGO
+            <div className={`logo ${theme === "light" ? "logo-dark" : ""}`} >
+{/* L A <span className="material-symbols-rounded" >
+                    light
+          </span> M P  */}
+
                 </div>
+                <div className="link-lists">
                 <li className="nav-item">
                     <a className={`nav-link ${status === "Home" ? "active" : ''}  ${theme === "light"?"white-txt":""}`} aria-current="page" href="#" data-value={"Home"} onClick={handleLiVal}>Home</a>
                 </li>
@@ -30,9 +34,12 @@ const Nav = () => {
                     <a className={`nav-link disabled${status === "Notes" ? "active" : ''}  ${theme === "light"?"white-txt":""}`} aria-disabled="true" data-value={"Notes"} onClick={handleLiVal}>Notes</a>
 
                 </li>
-                <li className="nav-item dropdown">
-                    <a className={`nav-link ${status === "more" ? "active" : ''} dropdown-toggle ${theme === "light"?"white-txt":""}`} data-bs-toggle="dropdown" href="#" role="button"
-                        aria-expanded="false" data-value={"more"} onClick={handleLiVal}>More Info</a>
+             
+                </div>
+
+                {/* <li className="nav-item dropdown" title="Under Construction">
+                    <a className={`nav-link disabled ${status === "more" ? "active" : ''} dropdown-toggle ${theme === "light"?"white-txt":""}`} data-bs-toggle="dropdown" href="#" role="button"
+                        aria-expanded="false" data-value={"more"} onClick={handleLiVal}>More</a>
                     <ul className="dropdown-menu">
                         <li><a className="dropdown-item" href="#">Extra</a></li>
                         <li><a className="dropdown-item" href="#">What's new?</a></li>
@@ -42,10 +49,7 @@ const Nav = () => {
                         </li>
                         <li><a className="dropdown-item" href="#">Affilations</a></li>
                     </ul>
-                </li>
-
-
-
+                </li> */}
                 <div className="form-check form-switch" onClick={handleDarkTheme}>
                 {" "}{theme === "light"?<i className='fa-regular fa-sun'></i>:<i className='fa-regular fa-moon'></i>}
                     <label className={`form-check-label ` }htmlFor="flexSwitchCheckDefault" > </label>

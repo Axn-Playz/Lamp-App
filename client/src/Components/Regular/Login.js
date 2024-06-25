@@ -42,7 +42,9 @@ const Login = () => {
                     setPassword("");
                     console.log(data?.user.username)
                     localStorage.setItem('userName', data?.user.username);
-                    navigate("/setup");
+                    localStorage.setItem('userId', data?.user._id);
+                    console.log(data?.user._id)  
+                    navigate('/user');
                 }, 1500);
             } else if (data.message === "wrongPass") {
                 toast.error('🤔Detail didnt matched!', {
@@ -76,20 +78,20 @@ const Login = () => {
     }
     console.log(theme)
     return (
-     <>
+        <>
 
 
-        
-    <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Sign Up</h5>
-              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
+
+            <div className="modal fade" id="loginmodal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLongTitle">Login</h5>
+                            <button type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div className="modal-body">
 
 
 
@@ -101,70 +103,43 @@ const Login = () => {
 
                                 <form action='post'>
                                     <div className="mb-3">
-                                        <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                        <label htmlFor="exampleInputEmail111" className="form-label">Email address</label>
+                                        <input type="email" className="form-control" id="exampleInputEmail111" aria-describedby="emailHelp"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                         />
                                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                                        <input type="password" className="form-control" id="exampleInputPassword1" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                        <label htmlFor="exampleInputPassword111" className="form-label">Password</label>
+                                        <input type="password" className="form-control"
+                                            aria-autocomplete="exampleInputPassword111" value={password} onChange={(e) => setPassword(e.target.value)} />
                                         <div className="mb-3">
                                             <div id="emailHelp" className="form-text">We'll never share your pasword with anyone else.</div>
                                         </div>
                                     </div>
-                                
+
+                                <ToastContainer />
                                 </form>
+
+
+
+
+
+
                             </div>
 
-
-                    
-        <ToastContainer/>
-
-
-
+                         <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" className="btn btn-primary" onClick={handleSubmit}>Proceed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onClick={handleSubmit}>Proceed</button>
-            </div>
-          </div>
-        </div>
-        </div>
-    
 
 
-
-{/* <div className={`box lamp ${theme === "dark"?" dark-bg-lamp":""}`}>
-    <div className="container"> 
-
-
-    
-            <form action='post'>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    value={email}
-                    onChange={(e)=>setEmail(e.target.value)}
-                    />
-                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" value={password} onChange={(e)=>setPassword(e.target.value)}/>
-                    <div className="mb-3">
-                <div id="emailHelp" className="form-text">We'll never share your pasword with anyone else.</div>
-                </div>
-                </div>
-                <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</button>
-            </form>
-        </div>
-        </div> 
-        <ToastContainer/>
-        </div > */}
-</>
+        </>
     )
 
 }

@@ -1,5 +1,5 @@
 const express = require("express");
-const { registerController, getAllUserController, loginController } = require("../controllers/userController");
+const { registerController, getAllUserController, loginController, changerUsernameController } = require("../controllers/userController");
 
 
 // router object 
@@ -13,5 +13,9 @@ router.get("/all-users",getAllUserController);
 
 // POST method for login
 router.post("/login",loginController);
+
+// POST username to change username
+
+router.post('/:username',changerUsernameController);
 
 module.exports = router;
